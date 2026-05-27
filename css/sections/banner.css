@@ -97,6 +97,7 @@
     margin-top: 30px;
     font-size: small;
     max-width: 300px;
+    font-size: small;
 
     opacity: 0;
     transform: translateY(20px);
@@ -161,7 +162,7 @@
 
     cursor: pointer;
 
-    
+
 }
 
 /* ================= BOTTOM CONTROLS ================= */
@@ -208,9 +209,9 @@
     backdrop-filter: blur(5px);
 }
 
-.explore-btn:hover { 
+.explore-btn:hover {
 
-    transform: translateY(-3px); 
+    transform: translateY(-3px);
 }
 
 /* ================= SLIDER NAVIGATION ================= */
@@ -327,31 +328,95 @@
     }
 }
 
- /* ================= TABLET (<=1024px) ================= */
+/* ================= TABLET (<=1024px) ================= */
 @media (max-width: 1024px) {
 
-   .video-card,
-    .explore-btn {
+    .banner {
+        padding: 0 40px;
+        align-items: center;
+    }
+
+    .banner-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .banner-content h1 {
+        font-size: 60px;
+        line-height: 1;
+    }
+
+    .medium-text {
+        left: 0;
+    }
+
+    .banner-content p {
+        max-width: 100%;
+        font-size: small;
+    }
+
+    .video-card,
+    .explore-btn,
+    .slider-navigation {
         display: none;
     }
 
-    /* CENTER THE BOTTOM CONTROLS */
+
     .banner-controls {
+        padding: 40px;
         justify-content: center;
     }
 
-    .slider-navigation {
-           display: none;
+
+    .banner-controls-main {
+
+        border-top: none
     }
 }
+
 /* ================= MOBILE (<=768px) ================= */
 @media (max-width: 768px) {
 
-    .video-card {
-        display: none;
+    .banner {
+        padding: 0 20px;
+        height: 90vh;
     }
 
-    .explore-btn {
-        display: none;
+    .banner-wrapper {
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .banner-content p {
+        font-size: 13px;
+        margin-top: 15px;
+        text-align: justify;
+    }
+
+    .banner-controls {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+    }
+
+
+
+    .dots span {
+        width: 10px;
+        height: 10px;
+    }
+
+    .dots .active-dot {
+        width: 16px;
+        height: 16px;
     }
 }

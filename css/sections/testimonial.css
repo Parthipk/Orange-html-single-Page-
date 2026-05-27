@@ -46,7 +46,7 @@
 
  /* Text */
  .testimonial-card p {
-     font-size: 20px;
+   font-size: medium; 
      line-height: 1.7;
      color: #222;
      margin-bottom: 30px;
@@ -60,8 +60,7 @@
  }
 
  .testimonial-card span {
-     font-size: 15px;
-     color: #666;
+     font-size: medium; 
  }
 
  /* Navigation */
@@ -79,7 +78,7 @@
      border: none;
      font-size: 28px;
      cursor: pointer;
-     color: #345;
+     color: #466378;
      transition: 0.3s;
  }
 
@@ -98,6 +97,7 @@
 
  .dot {
      cursor: pointer;
+     color: #466378;
      transition: 0.3s;
  }
 
@@ -265,6 +265,7 @@
      grid-column: span 5 / span 5;
      grid-column-start: 3;
      grid-row-start: 5;
+     font-size: 25px; 
      background: transparent !important;
  }
 

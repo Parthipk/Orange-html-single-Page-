@@ -2,31 +2,38 @@
     display: flex;
     width: 100%;
     min-height: 300px;
-    /* adjust as needed */
     margin-top: 40px;
     padding: 0px 40px;
-       box-sizing: border-box;
+    box-sizing: border-box;
     overflow: hidden;
 }
 
-/* LEFT 30% (you wrote 40%, so I kept yours) */
+/* LEFT */
 .what-left {
     width: 40%;
     padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-.what-left span {
-    margin: 5px 0;
-    font-size: 14px;
-    font-weight: 500;
-    color: #466378;
-    letter-spacing: 0.5px;
-    opacity: 0.9;
+    gap: 18px;
 }
 
-.what-left read-more {
+.what-left h2 {
+    font-size: 50px;
+    margin: 0; 
+    font-weight: 600;
+    line-height:1.2;
+}
+
+.what-left span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #466378;
+    display: block; 
+    margin-top: 10px;
+}
+
+/* FIXED BUTTON (your bug was here) */
+.read-more {
     width: fit-content;
     padding: 10px 20px;
     background: black;
@@ -34,81 +41,64 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
     transition: all 0.3s ease;
-    /* smooth animation */
+    margin-left: 0px;
 }
 
-/* HOVER EFFECT */
 .read-more:hover {
     transform: translateY(-3px);
-    /* moves up */
 }
 
-
+.what-left p {
+    margin: 0;
+    line-height: 1.6;
+}
 
 /* RIGHT SIDE */
 .what-right {
     width: 60%;
-    /* adjust so total = 100% */
     display: flex;
     flex-direction: row;
-    /* stack images vertically */
     gap: 15px;
     align-items: flex-start;
     justify-content: center;
 }
 
-/* Base image style */
+/* IMAGE */
 .img {
     width: 100%;
     object-fit: cover;
     object-position: bottom;
-    /* IMPORTANT: crop from bottom → top effect */
     border-radius: 8px;
-
-
 }
 
-/* First image (full size reference) */
-.img1 {
-    height: 400px;
-    /* adjust as needed */
-}
-
-/* Second image (15% less than first) */
-.img2 {
-    height: 370px;
-}
-
-/* Third image (further reduced) */
-.img3 {
-    height: 340px;
-}
+.img1 { height: 400px; }
+.img2 { height: 370px; }
+.img3 { height: 340px; }
 
 .img-box {
     position: relative;
     width: 100%;
 }
 
+/* IMAGE TEXT OVERLAY */
 .img-text {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 40px 20px 20px;
-    /* more top padding = taller fade zone */
 
-    background: linear-gradient(to bottom,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.45) 100%
-            /* darker for text readability */
-        );
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.45) 100%
+    );
+
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
     color: #fff;
-
     border-radius: 8px;
 
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);
@@ -117,9 +107,13 @@
 
 .img-text h3 {
     margin: 0;
-    font-size: 16px;
+    font-size: 30px;
 }
 
+.img-text p {
+    margin: 0;
+    font-size: small;
+}
 
 .text-box .title {
     font-size: 14px;
@@ -128,15 +122,21 @@
     margin: 0;
 }
 
-
-
-
+/* ================= MOBILE / TABLET ================= */
 @media (max-width: 720px) {
 
     .what-we-do {
         flex-direction: column;
         padding: 0px 10px;
+    }
 
+    .what-left h2 {
+        font-size: 30px;
+    }
+
+    .what-left span {
+        font-size: 15px;
+        color: #466378;
     }
 
     .what-left,
@@ -150,19 +150,17 @@
 
     .what-right {
         flex-direction: column;
-        align-items:start;
+        align-items: start;
     }
 
     .img-box {
         width: 100%;
         max-width: 500px;
-        /* optional: keeps images neat */
     }
 
     .img1,
     .img2,
     .img3 {
         height: 300px;
-        /* unify height for mobile/tablet */
     }
 }
