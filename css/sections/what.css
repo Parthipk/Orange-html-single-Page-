@@ -1,0 +1,133 @@
+.what-we-do {
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+    /* adjust as needed */
+    margin-top: 40px;
+    padding: 0px 20px;
+}
+
+/* LEFT 30% (you wrote 40%, so I kept yours) */
+.what-left {
+    width: 40%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* RIGHT SIDE */
+.what-right {
+    width: 60%;
+    /* adjust so total = 100% */
+    display: flex;
+    flex-direction: row;
+    /* stack images vertically */
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Base image style */
+.img {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    /* IMPORTANT: crop from bottom → top effect */
+    border-radius: 8px;
+
+
+}
+
+/* First image (full size reference) */
+.img1 {
+    height: 400px;
+    /* adjust as needed */
+}
+
+/* Second image (15% less than first) */
+.img2 {
+    height: 370px;
+}
+
+/* Third image (further reduced) */
+.img3 {
+    height: 340px;
+}
+
+.img-box {
+    position: relative;
+    width: 100%;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 20px 20px;
+    /* more top padding = taller fade zone */
+
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.45) 100%
+            /* darker for text readability */
+        );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: #fff;
+
+    border-radius: 8px;
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 40%);
+}
+
+.img-text h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.img-text p {
+    margin: 3px 0 0;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+
+@media (max-width: 1024px) {
+
+    .what-we-do {
+        flex-direction: column;
+        padding: 0px 10px;
+
+    }
+
+    .what-left,
+    .what-right {
+        width: 100%;
+    }
+
+    .what-left {
+        padding: 5px;
+    }
+
+    .what-right {
+        flex-direction: column;
+        align-items:start;
+    }
+
+    .img-box {
+        width: 100%;
+        max-width: 500px;
+        /* optional: keeps images neat */
+    }
+
+    .img1,
+    .img2,
+    .img3 {
+        height: 300px;
+        /* unify height for mobile/tablet */
+    }
+}

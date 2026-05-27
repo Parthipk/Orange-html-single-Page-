@@ -1,0 +1,53 @@
+@media(max-width:991px){
+
+    .navbar{
+        padding:20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .banner{
+        flex-direction:column;
+        justify-content:center;
+
+        padding:120px 20px 40px;
+    }
+
+    .banner-content{
+        width:100%;
+        text-align:center;
+    }
+
+    .banner-content h1{
+        font-size:60px;
+    }
+
+    .banner-content p{
+        width:100%;
+    }
+
+    .banner-image{
+        position:relative;
+        left:0;
+
+        width:80%;
+    }
+
+    .video-card{
+        position:relative;
+        right:0;
+        top:0;
+
+        transform:none;
+
+        margin-top:20px;
+    }
+
+    .slider-navigation{
+        right:50%;
+        transform:translateX(50%);
+    }
+
+}
