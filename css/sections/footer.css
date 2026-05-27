@@ -9,7 +9,7 @@
   font-family: Arial, sans-serif;
   color: #fff;
   width: 100%;
-  padding: 70px 90px 30px;
+
 }
 
 /* ================= NEWSLETTER ================= */
@@ -19,6 +19,7 @@
   align-items: flex-start;
   gap: 60px;
   padding-bottom: 50px;
+  padding: 70px 90px 30px;
 }
 
 .newsletter-text h2 {
@@ -42,6 +43,8 @@
   overflow: hidden;
   width: 480px;
   height: 55px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .newsletter-form input {
@@ -68,7 +71,9 @@
 hr {
   border: none;
   border-top: 1px solid #1f1f1f;
+  width: 100%;
   margin: 35px 0;
+  display: block;
 }
 
 /* ================= MAIN CONTENT ================= */
@@ -76,7 +81,8 @@ hr {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 70px;
-  padding: 30px 0 40px;
+  padding: 70px 90px 30px;
+
 }
 
 /* ABOUT */
@@ -130,6 +136,22 @@ hr {
   font-size: 13px;
 }
 
+/* CONTACT ITEM ALIGN */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: #ccc;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.contact-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
 /* ================= BOTTOM ================= */
 .footer-bottom {
   display: flex;
@@ -137,7 +159,7 @@ hr {
   align-items: center;
   gap: 25px;
   flex-wrap: wrap;
-  padding-top: 15px;
+  padding: 20px 90px 30px;
 }
 
 .footer-bottom p {
@@ -164,10 +186,18 @@ hr {
 }
 
 /* ================= RESPONSIVE ================= */
+
+/* TABLET */
 @media (max-width: 991px) {
+
+  .footer {
+    padding: 60px 40px;
+  }
+
   .newsletter {
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
+    padding: 0px;
   }
 
   .newsletter-form {
@@ -177,23 +207,66 @@ hr {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 0px;
   }
 
-  .footer {
-    padding: 60px 40px;
+  .footer-bottom {
+    padding: 10px;
+  }
+
+  .newsletter-text h2 {
+    font-size: 32px;
+  }
+
+  .footer-about h2 {
+    font-size: 34px;
   }
 }
 
+/* MOBILE */
 @media (max-width: 600px) {
+
   .footer {
     padding: 50px 20px;
   }
 
   .newsletter-text h2 {
-    font-size: 30px;
+    font-size: 26px;
+  }
+
+  .newsletter-text p {
+    font-size: 13px;
+  }
+
+  .newsletter-form {
+    height: 50px;
+  }
+
+  .newsletter-form button {
+    font-size: 20px;
+    width: 50px;
   }
 
   .footer-about h2 {
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 14px;
+  }
+
+  .contact-item {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
   }
 }

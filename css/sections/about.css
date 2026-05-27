@@ -21,7 +21,7 @@
 .about-left h1 {
     font-size: 50px;
     line-height: 1.1;
-    font-weight: 400;
+    font-weight: 600;
 
 }
 
@@ -70,6 +70,7 @@
 /* Second image = 150px */
 .img-row img:last-child {
     width: 300px;
+     height: 350px;
 }
 
 /* RIGHT SIDE */
@@ -95,6 +96,15 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
+    transition: all 0.3s ease;
+    /* smooth animation */
+}
+
+/* HOVER EFFECT */
+.read-more:hover {
+    transform: translateY(-3px);
+    /* moves up */
 }
 
 
@@ -141,8 +151,9 @@
 }
 
 .text-box .title {
-    font-size: 16px;
-    color: #4a6075;
+    font-size: 14px;
+    color: #466378;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -228,13 +239,13 @@
 @media (max-width: 768px) {
 
     .about-left {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    /* key change */
-    text-align: left; 
-}
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        /* key change */
+        text-align: left;
+    }
 
     /* TITLE */
     .about-left h1 {
@@ -244,7 +255,7 @@
 
     /* TEXT */
     .about-text p {
-          width: 95%;
+        width: 95%;
         font-size: 12px;
         text-align: justify;
         padding: 0 8px;
