@@ -229,6 +229,8 @@
     .stat-card {
         width: 48%;
         padding: 12px 15px;
+        border-left: 0px;
+        border-right: 0px;
     }
 
     .about-right {
@@ -267,7 +269,7 @@
     .read-more {
         align-self: flex-start;
         margin-left: 10px;
-        padding: 8px 16px;
+        padding: 10px 16px;
         font-size: 14px;
     }
 
