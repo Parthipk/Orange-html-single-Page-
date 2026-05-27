@@ -19,16 +19,16 @@
 
 .what-left h2 {
     font-size: 50px;
-    margin: 0; 
+    margin: 0;
     font-weight: 600;
-    line-height:1.2;
+    line-height: 1.2;
 }
 
 .what-left span {
     font-size: 25px;
     font-weight: 500;
     color: #466378;
-    display: block; 
+    display: block;
     margin-top: 10px;
 }
 
@@ -72,9 +72,17 @@
     border-radius: 8px;
 }
 
-.img1 { height: 400px; }
-.img2 { height: 370px; }
-.img3 { height: 340px; }
+.img1 {
+    height: 400px;
+}
+
+.img2 {
+    height: 370px;
+}
+
+.img3 {
+    height: 340px;
+}
 
 .img-box {
     position: relative;
@@ -89,11 +97,9 @@
     width: 100%;
     padding: 40px 20px 20px;
 
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.45) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.45) 100%);
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -120,6 +126,12 @@
     color: #466378;
     font-weight: 400;
     margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .what-we-do { 
+        padding: 1px; 
+    }
 }
 
 /* ================= MOBILE / TABLET ================= */
@@ -157,6 +169,8 @@
         width: 100%;
         max-width: 500px;
     }
+
+
 
     .img1,
     .img2,
